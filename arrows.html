@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow Functions</title>
+</head>
+<body>
+  <script>
+    const names = ["foo", "bar", "baz"];
+
+    const alteredNames = names.map(function(n){
+      return `${n}!!`;
+    });
+
+    console.log(alteredNames);
+
+    /*** Using arrow functions */
+
+    // Multiples variables: const alteredNames2 = names.map((name, i) => { ...
+    const alteredNames2 = names.map(n => {
+      return `${n}!!`;
+    });
+
+    console.log(alteredNames2);
+
+    // Implicit Return
+    const alteredNames3 = names.map(n => `${n}!!`);
+
+    console.log(alteredNames3);
+
+    // No arguments
+    const alteredNames4 = names.map(() => `some text`);
+
+    console.log(alteredNames4);
+
+    // Storing function
+    const testThing = (text) => { console.log(`${text}?!`) };
+
+    testThing("foo"); // test that it works?
+    names.map(testThing);
+  </script>
+</body>
+</html>
