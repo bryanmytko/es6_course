@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strings!</title>
+</head>
+<body>
+  <script>
+    var dog_name = 'Snickers';
+    var dog_age = 2;
+    var dog_sentence = 'My dog ' + dog_name + ' is ' + dog_age + ' years old.';
+
+    // ES6
+    const name = 'Snickers';
+    const age = 2;
+    const sentence = `My dog ${name} is ${age} years old`;
+
+    //HTML Fragments example
+    const person = {
+      name: 'Bryan',
+      city: 'New York',
+      bio: 'Programmer'
+    };
+
+    const markup = `
+      <div class="person">
+        <h2>
+          ${person.name}
+        </h2>
+        <p>${person.city}</p>
+        <p>${person.bio}</p>
+      </div>
+    `;
+
+    document.body.innerHTML = markup;
+
+  </script>
+</body>
+</html>
